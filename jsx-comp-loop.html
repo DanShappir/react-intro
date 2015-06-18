@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>simple jsx component</title>
+</head>
+<body>
+    <h1>Simple jsx component</h1>
+    <div></div>
+
+    <script src="https://fb.me/react-0.13.3.js"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.9.3/lodash.js"></script>
+
+    <script type="text/jsx">
+        var root = document.querySelector('div');
+
+        var Hello = React.createClass({
+            render: function () {
+                var times = this.props.times || 1;
+                var name = this.props.name || 'world';
+                return <ol>{
+                    _.range(times).map(function () {
+                        return <li>hello <b>{name}</b></li>;
+                    })
+                }</ol>;
+            }
+        });
+        React.render(<Hello times={10}></Hello>, root);
+    </script>
+</body>
+</html>

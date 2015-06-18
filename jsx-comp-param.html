@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Simple JSX component</title>
+</head>
+<body>
+    <h1>Simple JSX component</h1>
+    <div></div>
+
+    <script src="https://fb.me/react-0.13.3.js"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+
+    <script type="text/jsx">
+        var root = document.querySelector('div');
+
+        var Hello = React.createClass({
+            render: function () {
+                var name = this.props.name || 'world';
+                return <div>Hello <b>{name}</b></div>;
+            }
+        });
+        React.render(<Hello name="Dan"></Hello>, root);
+    </script>
+</body>
+</html>

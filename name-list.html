@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Simple JSX component</title>
+</head>
+<body>
+    <h1>Simple JSX component</h1>
+    <div></div>
+
+    <script src="https://fb.me/react-0.13.3.js"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+
+    <script type="text/jsx">
+        var root = document.querySelector('div');
+
+        var SortButton = React.createClass({
+            displayName: 'SortButton',
+
+            getInitialState: function () {
+                return {ascending: true};
+            },
+            handleClick: function () {
+                var ascending = !this.state.ascending;
+                this.setState({ascending: ascending});
+                if (this.props.dirChanged) {
+                    this.props.dirChanged(ascending);
+                }
+            },
+            render: function () {
+                var text = (this.state.ascending ? '▲' : '▼') + ' sort';
+                return <button onClick={this.handleClick} style={{width:80, height:30}}>{text}</button>;
+            }
+        });
+
+        var NameList = React.createClass({
+            displayName: 'NameList',
+
+            getInitialState: function () {
+                return {names: []};
+            },
+            componentDidMount: function () {
+                $.ajax({
+                    url: 'resources/names.json',
+                    dataType: 'json',
+                    success: function (data) {
+                        this.setState({names: data.names});
+                    }.bind(this)
+                });
+            },
+            render: function () {
+                var names = this.state.names.sort();
+                if (!this.props.ascending) {
+                    names = names.reverse();
+                }
+                return <ul>{
+                    names.map(function (name) {
+                        return <li key={name}>hello <b>{name}</b></li>;
+                    })
+                }</ul>;
+            }
+        });
+
+        var SortableNameList = React.createClass({
+            displayName: 'SortableNameList',
+
+            getInitialState: function () {
+                return {ascending: true};
+            },
+            dirChanged: function (ascending) {
+                this.setState({ascending: ascending});
+            },
+            render: function () {
+                var ascending = this.state.ascending;
+                return <div>
+                    <SortButton dirChanged={this.dirChanged}/>
+                    <NameList ascending={ascending}/>
+                </div>;
+            }
+        });
+
+        React.render(<SortableNameList/>, root);
+    </script>
+</body>
+</html>
