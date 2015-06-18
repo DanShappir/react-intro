@@ -18,19 +18,10 @@
         var SortButton = React.createClass({
             displayName: 'SortButton',
 
-            getInitialState: function () {
-                return {ascending: true};
-            },
-            handleClick: function () {
-                var ascending = !this.state.ascending;
-                this.setState({ascending: ascending});
-                if (this.props.dirChanged) {
-                    this.props.dirChanged(ascending);
-                }
-            },
             render: function () {
-                var text = (this.state.ascending ? '▲' : '▼') + ' sort';
-                return <button onClick={this.handleClick} style={{width:80, height:30}}>{text}</button>;
+                var text = (this.props.ascending ? '▲' : '▼') + ' sort';
+                var clickHandler = this.props.dirChanged ? this.props.dirChanged : function () {};
+                return <button onClick={clickHandler} style={{width:80, height:30}}>{text}</button>;
             }
         });
 
@@ -52,7 +43,7 @@
             render: function () {
                 var names = this.state.names.sort();
                 if (!this.props.ascending) {
-                    names = names.reverse();
+                    names.reverse();
                 }
                 return <ul>{
                     names.map(function (name) {
@@ -68,13 +59,13 @@
             getInitialState: function () {
                 return {ascending: true};
             },
-            dirChanged: function (ascending) {
-                this.setState({ascending: ascending});
+            dirChanged: function () {
+                this.setState({ascending: !this.state.ascending});
             },
             render: function () {
                 var ascending = this.state.ascending;
                 return <div>
-                    <SortButton dirChanged={this.dirChanged}/>
+                    <SortButton ascending={ascending} dirChanged={this.dirChanged}/>
                     <NameList ascending={ascending}/>
                 </div>;
             }
