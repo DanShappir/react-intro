@@ -6,14 +6,14 @@
 </head>
 <body>
     <h1>Simple jsx component</h1>
-    <div></div>
+    <div id="root"></div>
 
     <script src="https://fb.me/react-0.13.3.js"></script>
     <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.9.3/lodash.js"></script>
 
     <script type="text/jsx">
-        var root = document.querySelector('div');
+        var root = document.getElementById('root');
 
         var Hello = React.createClass({
             render: function () {

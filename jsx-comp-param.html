@@ -6,13 +6,13 @@
 </head>
 <body>
     <h1>Simple JSX component</h1>
-    <div></div>
+    <div id="root"></div>
 
     <script src="https://fb.me/react-0.13.3.js"></script>
     <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
 
     <script type="text/jsx">
-        var root = document.querySelector('div');
+        var root = document.getElementById('root');
 
         var Hello = React.createClass({
             render: function () {
