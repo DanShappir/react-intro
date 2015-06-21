@@ -16,11 +16,13 @@
         var root = document.getElementById('root');
 
         var Hello = React.createClass({
+            getDefaultProps: function () {
+                return {times: 1, name: 'world'};
+            },
             render: function () {
-                var times = this.props.times || 1;
-                var name = this.props.name || 'world';
+                var name = this.props.name;
                 return <ol>{
-                    _.range(times).map(function () {
+                    _.range(this.props.times).map(function () {
                         return <li>hello <b>{name}</b></li>;
                     })
                 }</ol>;
