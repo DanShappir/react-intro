@@ -24,8 +24,8 @@
                 this.setState({ascending: !this.state.ascending});
             },
             render: function () {
-                var text = (this.state.ascending ? '▲' : '▼') + ' sort';
-                return <button onClick={this.handleClick} style={{width:80, height:30}}>{text}</button>;
+                var dir = this.state.ascending ? '▲' : '▼';
+                return <button onClick={this.handleClick} style={{width:80, height:30}}>{dir} sort</button>;
             }
         });
         React.render(<SortButton/>, root);

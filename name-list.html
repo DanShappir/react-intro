@@ -18,10 +18,12 @@
         var SortButton = React.createClass({
             displayName: 'SortButton',
 
+            getDefaultProps: function () {
+                return {dirChanged: function () {}};
+            },
             render: function () {
-                var text = (this.props.ascending ? '▲' : '▼') + ' sort';
-                var clickHandler = this.props.dirChanged ? this.props.dirChanged : function () {};
-                return <button onClick={clickHandler} style={{width:80, height:30}}>{text}</button>;
+                var dir = this.props.ascending ? '▲' : '▼';
+                return <button onClick={this.props.dirChanged} style={{width:80, height:30}}>{dir} sort</button>;
             }
         });
 
