@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30435300-e043-478e-9e93-a8b43845fbce" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/names.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/jsx-comp-param.html" afterPath="$PROJECT_DIR$/jsx-comp-prop.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="react-intro.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jsx-comp-param.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsx-comp-param.html">
+      <file leaf-file-name="jsx-comp-prop.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jsx-comp-prop.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="465">
-              <caret line="19" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.097402595" vertical-offset="0" max-vertical-offset="1078">
+              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -97,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="name-list.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="name-list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/name-list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17595308" vertical-offset="0" max-vertical-offset="1365">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.367089" vertical-offset="0" max-vertical-offset="1260">
+              <caret line="23" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -118,11 +118,12 @@
         <option value="$PROJECT_DIR$/simple.html" />
         <option value="$PROJECT_DIR$/simple-jsx.html" />
         <option value="$PROJECT_DIR$/simple-jsx-comp.html" />
-        <option value="$PROJECT_DIR$/jsx-comp-param.html" />
         <option value="$PROJECT_DIR$/jsx-comp-loop.html" />
         <option value="$PROJECT_DIR$/resources/package.json" />
         <option value="$PROJECT_DIR$/comp-state.html" />
         <option value="$PROJECT_DIR$/name-list.html" />
+        <option value="$PROJECT_DIR$/jsx-comp-param.html" />
+        <option value="$PROJECT_DIR$/jsx-comp-prop.html" />
       </list>
     </option>
   </component>
@@ -299,30 +300,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simple-jsx.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="360">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simple-jsx-comp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="450">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jsx-comp-param.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="465">
-          <caret line="19" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/comp-state.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="585">
@@ -349,8 +326,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/name-list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17595308" vertical-offset="0" max-vertical-offset="1365">
+        <state vertical-scroll-proportion="-4.367089" vertical-offset="0" max-vertical-offset="1260">
+          <caret line="23" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple-jsx.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="360">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple-jsx-comp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="450">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsx-comp-prop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.097402595" vertical-offset="0" max-vertical-offset="1078">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
           <folding />
         </state>
       </provider>

@@ -2,10 +2,10 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Simple JSX component</title>
+    <title>JSX component with property</title>
 </head>
 <body>
-    <h1>Simple JSX component</h1>
+    <h1>JSX component with property</h1>
     <div id="root"></div>
 
     <script src="https://fb.me/react-0.13.3.js"></script>
@@ -15,8 +15,11 @@
         var root = document.getElementById('root');
 
         var Hello = React.createClass({
+            getDefaultProps: function () {
+                return {name: 'world'};
+            },
             render: function () {
-                var name = this.props.name || 'world';
+                var name = this.props.name;
                 return <div>Hello <b>{name}</b></div>;
             }
         });
