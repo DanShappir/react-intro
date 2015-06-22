@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="30435300-e043-478e-9e93-a8b43845fbce" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/name-list.html" afterPath="$PROJECT_DIR$/name-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="react-intro.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="name-list.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="name-list.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/name-list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.25" vertical-offset="180" max-vertical-offset="1320">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.012059369" vertical-offset="197" max-vertical-offset="1275">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -99,17 +100,17 @@
       <file leaf-file-name="names.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/names.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="225">
-              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+            <state vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="225">
+              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="name-list-other.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="name-list-other.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/name-list-other.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.625" vertical-offset="180" max-vertical-offset="1260">
+            <state vertical-scroll-proportion="-28.125" vertical-offset="180" max-vertical-offset="1260">
               <caret line="57" column="28" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="28" />
               <folding />
             </state>
@@ -133,6 +134,7 @@
         <option value="$PROJECT_DIR$/jsx-comp-prop.html" />
         <option value="$PROJECT_DIR$/jsx-comp-loop.html" />
         <option value="$PROJECT_DIR$/name-list2.html" />
+        <option value="$PROJECT_DIR$/resources/names.json" />
         <option value="$PROJECT_DIR$/name-list.html" />
       </list>
     </option>
@@ -383,14 +385,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/names.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="225">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simple-jsx.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="360">
@@ -431,18 +425,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/name-list.html">
+    <entry file="file://$PROJECT_DIR$/name-list-other.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25" vertical-offset="180" max-vertical-offset="1320">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="-28.125" vertical-offset="180" max-vertical-offset="1260">
+          <caret line="57" column="28" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/name-list-other.html">
+    <entry file="file://$PROJECT_DIR$/resources/names.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.625" vertical-offset="180" max-vertical-offset="1260">
-          <caret line="57" column="28" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="28" />
+        <state vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="225">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/name-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.012059369" vertical-offset="197" max-vertical-offset="1275">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
           <folding />
         </state>
       </provider>

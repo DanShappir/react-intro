@@ -16,7 +16,6 @@
 
     <script src="https://fb.me/react-0.13.3.js"></script>
     <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 
     <script type="text/jsx">
         var root = document.getElementById('root');
@@ -25,7 +24,7 @@
             displayName: 'SortButton',
 
             getDefaultProps: function () {
-                return {dirChanged: $.noop};
+                return {dirChanged: function () {}};
             },
             render: function () {
                 var dir = this.props.ascending ? '▲' : '▼';
@@ -70,12 +69,10 @@
         });
 
         React.render(<SortableNameList/>, root, function () {
-            $.ajax({
-                url: 'resources/names.json',
-                dataType: 'json',
-                success: function (data) {
-                    React.render(<SortableNameList names={data.names}/>, root);
-                }
+            fetch('resources/names.json').then(function (r) {
+                return r.json();
+            }).then(function (data) {
+                React.render(<SortableNameList names={data.names}/>, root);
             });
         });
     </script>
