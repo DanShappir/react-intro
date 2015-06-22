@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JSX composition</title>
+    <style>
+        button {
+            width: 80px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JSX composition</h1>
+    <div id="root"></div>
+
+    <script src="https://fb.me/react-0.13.3.js"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+
+    <script type="text/jsx">
+        var root = document.getElementById('root');
+
+        var SortButton = React.createClass({
+            displayName: 'SortButton',
+
+            getDefaultProps: function () {
+                return {dirChanged: function () {}};
+            },
+            render: function () {
+                var dir = this.props.ascending ? '▲' : '▼';
+                return <button onClick={this.props.dirChanged}>{dir} sort</button>;
+            }
+        });
+
+        var NameList = React.createClass({
+            displayName: 'NameList',
+
+            getDefaultProps: function () {
+                return {names: []};
+            },
+            render: function () {
+                var dir = this.props.ascending ? 1 : -1;
+                return <ul>{
+                    this.props.names.map(function (name) {
+                        return <li key={name}>hello <b>{name}</b></li>;
+                    }).sort(function (a, b) {
+                        return a.key.localeCompare(b.key) * dir;
+                    })
+                }</ul>;
+            }
+        });
+
+        var SortableNameList = React.createClass({
+            displayName: 'SortableNameList',
+
+            getInitialState: function () {
+                return {ascending: true};
+            },
+            dirChanged: function () {
+                this.setState({ascending: !this.state.ascending});
+            },
+            render: function () {
+                var ascending = this.state.ascending;
+                return <div>
+                    <SortButton ascending={ascending} dirChanged={this.dirChanged}/>
+                    <NameList ascending={ascending} names={this.props.names}/>
+                </div>;
+            }
+        });
+
+        React.render(<SortableNameList/>, root, function () {
+            $.ajax({
+                url: 'resources/names.json',
+                dataType: 'json',
+                success: function (data) {
+                    React.render(<SortableNameList names={data.names}/>, root);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
